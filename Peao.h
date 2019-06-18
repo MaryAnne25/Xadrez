@@ -15,5 +15,6 @@ private:
 public:
 	Peao(bool Time);
 	char desenha();
+	
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };
