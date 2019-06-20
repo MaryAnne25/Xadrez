@@ -1,20 +1,17 @@
 /*
- * Cavalo.h
+ * Rei.h
  *
- *  Created on: 17 de abr de 2019
- *      Author: jv
+ *  Created on: 16 de abr de 2019
+ *      Author: Mariane
  */
 #include <iostream>
 #include <string.h>
+#include "Piece.h"
 
-class Cavalo {
+class Rei : public Piece{
 
-private:
-	bool time;
-	bool emJogo;
-	
 public:
-	Cavalo(bool Time);
+	Rei(bool Time);
 	char desenha();
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };

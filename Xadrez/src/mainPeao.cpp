@@ -56,7 +56,7 @@ Teste do método checaMovimento() para o time FALSE(PRETO):
 							Movimento Invalido
 							Movimento Invalido
 
-*/
+*//*
 #include <iostream>
 #include "Peao.h"
 
@@ -135,4 +135,4 @@ int main () {
 		cout << "Movimento Invalido" << endl;
 
 	return 0;
-}
+}*/

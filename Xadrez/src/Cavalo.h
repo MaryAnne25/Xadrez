@@ -1,20 +1,17 @@
 /*
- * Peao.h
+ * Cavalo.h
  *
- *  Created on: 23 de abr de 2019
+ *  Created on: 17 de abr de 2019
  *      Author: jv
  */
 #include <iostream>
 #include <string.h>
+#include "Piece.h"
 
-class Peao {
+class Cavalo : public Piece {
 
-private:
-	bool time;
-	bool emJogo;
 public:
-	Peao(bool Time);
+	Cavalo(bool Time);
 	char desenha();
-	
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };

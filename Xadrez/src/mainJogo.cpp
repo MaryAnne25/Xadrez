@@ -23,7 +23,7 @@ Teste da Classe Jogo:
 			Estado: 1
 			Vez: 1
 */
-
+/*
 #include <iostream>
 #include "Jogo.h"
 
@@ -33,4 +33,4 @@ int main () {
 	Jogo jogo; // declara o jogo do tipo Jogo e que imprime em seu construtor o tabuleiro
 	cout << "Estado: " << jogo.getEstado() << endl << "Vez: " << jogo.getVez() << endl; // comprova o valor 1 dado aos atributos estado e vez.
 	return 0;
-}
+}*/

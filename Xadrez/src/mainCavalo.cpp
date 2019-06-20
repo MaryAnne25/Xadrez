@@ -50,7 +50,7 @@ Teste do método checaMovimento():
 							Movimento Invalido
 
 */
-#include <iostream>
+/*#include <iostream>
 #include "Cavalo.h"
 
 using namespace std;
@@ -127,3 +127,4 @@ int main () {
 
 	return 0;
 }
+*/

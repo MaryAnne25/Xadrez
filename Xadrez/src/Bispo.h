@@ -6,13 +6,10 @@
  */
 #include <iostream>
 #include <string.h>
+#include "Piece.h"
 
-class Bispo {
+class Bispo : public Piece{
 
-private:
-	bool time; // 0 o time de cima
-	bool emJogo;
-	
 public:
 	Bispo(bool Time);
 	char desenha();

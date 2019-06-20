@@ -1,19 +1,17 @@
 /*
- * Rei.h
+ * Peao.h
  *
- *  Created on: 16 de abr de 2019
- *      Author: Mariane
+ *  Created on: 23 de abr de 2019
+ *      Author: jv
  */
 #include <iostream>
 #include <string.h>
+#include "Piece.h"
 
-class Rei {
+class Peao : public Piece{
 
-private:
-	bool time;
-	bool emJogo;
 public:
-	Rei(bool Time);
+	Peao(bool Time);
 	char desenha();
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };

@@ -11,7 +11,7 @@ Teste da classe Posicao:
 						Atributo COR do objeto posicao1:		1
 						Atributo OCUPADO do objeto posicao1: 	0
 
-*/
+*//*
 #include <iostream>
 #include "Posicao.h"
 using namespace std;
@@ -26,4 +26,4 @@ int main(){
 	cout << "Atributo OCUPADO do objeto posicao1: 	" << posicao1.getOcupado() << endl;
 	
 	return 0;
-}
+}*/

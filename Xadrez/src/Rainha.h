@@ -6,13 +6,10 @@
  */
 #include <iostream>
 #include <string.h>
+#include "Piece.h"
 
-class Rainha {
+class Rainha : public Piece{
 
-private:
-	bool time;
-	bool emJogo;
-	
 public:
 	Rainha(bool Time);
 	char desenha();

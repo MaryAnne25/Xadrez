@@ -20,7 +20,7 @@ Teste do metodo desenharTabuleiro da classe Tabuleiro:
 				8 | 0  1  0  1  0  1  0  1 |
 
 
-*/
+*//*
 
 #include <iostream>
 #include "Tabuleiro.h"
@@ -34,3 +34,4 @@ int main () {
 
 	tabuleiro.desenharTabuleiro();					//imprime a matriz de objetos(cor)
 }
+*/

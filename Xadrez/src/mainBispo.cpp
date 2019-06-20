@@ -40,7 +40,7 @@ Teste do método checaMovimento():
 							Movimento Invalido
 							Movimento Invalido
 
-*/
+*//*
 #include <iostream>
 #include "Bispo.h"
 
@@ -101,3 +101,4 @@ int main () {
 
 	return 0;
 }
+*/

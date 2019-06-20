@@ -29,7 +29,7 @@ Teste do método checaMovimento():
 							Movimento Invalido
 
 
-*/
+*//*
 #include <iostream>
 #include "Torre.h"
 
@@ -69,3 +69,4 @@ int main () {
 
 	return 0;
 }
+*/

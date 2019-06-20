@@ -34,7 +34,7 @@ Teste do método checaMovimento():
 							Movimento Invalido
 
 
-*/
+*//*
 #include <iostream>
 #include "Rainha.h"
 
@@ -78,4 +78,4 @@ int main () {
 			cout << "Movimento Invalido" << endl;
 
 	return 0;
-}
+}*/
