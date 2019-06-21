@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <string.h>
+#include "Piece.h"
 
 class Posicao{
 
@@ -16,6 +17,7 @@ class Posicao{
 		int linha, coluna;
 		bool cor; // preto é ausencia de cor 0
 		bool ocupado;
+		Piece peca;
 		
 	public:
 		Posicao(int Linha, int Coluna);

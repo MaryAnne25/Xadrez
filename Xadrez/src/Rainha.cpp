@@ -24,11 +24,6 @@ char Rainha::desenha() {      // desenha a peca no tabuleiro
 		return 'q';
 }
 
-
-
-
-
-
 bool Rainha::checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino){
 	if ((linhaDestino > 0 && linhaDestino < 9) && (colunaDestino > 0 && colunaDestino < 9)) { //checa se esta no tabuleiro
 

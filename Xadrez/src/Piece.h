@@ -10,8 +10,7 @@
 
 class Piece {
 public:
-	Piece();
-	virtual ~Piece();
+	virtual ~Piece(){}
 	virtual char desenha();
 	virtual bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 

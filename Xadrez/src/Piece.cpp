@@ -7,21 +7,8 @@
 
 #include "Piece.h"
 
-Piece::Piece() {
-	// TODO Auto-generated constructor stub
+char Piece::desenha(){}
 
-}
-
-Piece::~Piece() {
-	// TODO Auto-generated destructor stub
-}
-
-char Piece::desenha(){
-
-}
-
-bool Piece::checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino){
-
-}
+bool Piece::checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino){} // @suppress("No return")
 
 
