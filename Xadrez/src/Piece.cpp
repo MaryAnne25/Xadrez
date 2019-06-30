@@ -7,8 +7,7 @@
 
 #include "Piece.h"
 
-char Piece::desenha(){}
 
-bool Piece::checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino){} // @suppress("No return")
+
 
 

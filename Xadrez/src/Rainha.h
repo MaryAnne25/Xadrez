@@ -11,7 +11,10 @@
 class Rainha : public Piece{
 
 public:
-	Rainha(bool Time);
+	Rainha(bool t);
+	virtual ~Rainha(){ };
+	void captured();
+	bool getTeam();
 	char desenha();
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };

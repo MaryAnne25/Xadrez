@@ -11,7 +11,10 @@
 class Torre : public Piece{
 
 public:
-	Torre(bool Time);
+	Torre(bool t);
+	virtual ~Torre(){ };
+	void captured();
+	bool getTeam();
 	char desenha();
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };

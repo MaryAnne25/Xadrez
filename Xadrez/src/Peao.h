@@ -11,7 +11,10 @@
 class Peao : public Piece{
 
 public:
-	Peao(bool Time);
+	Peao(bool t);
+	virtual ~Peao(){ };
+	void captured();
+	bool getTeam();
 	char desenha();
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };

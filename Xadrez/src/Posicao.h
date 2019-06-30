@@ -14,15 +14,19 @@
 class Posicao{
 
 	private:
-		int linha, coluna;
+		int linha;
+		int coluna;
 		bool cor; // preto é ausencia de cor 0
 		bool ocupado;
-		Piece peca;
+		Piece* piece;
 		
 	public:
 		Posicao(int Linha, int Coluna);
 		bool getCor();
 		bool getOcupado();
+		void setOcupado(Piece* p);
+		void setDesocupado();
+		Piece* getPiece();
 };
 
 #endif

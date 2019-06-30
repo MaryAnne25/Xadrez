@@ -10,34 +10,54 @@
 
 using namespace std;
 
-Rei::Rei(bool Time) {
+Rei::Rei(bool t){
 	emJogo = true;
-	time = Time;
+	team = t;
+}
+
+void Rei::captured(){
+	emJogo = false;
+}
+
+bool Rei::getTeam(){
+	return team;
 }
 
 char Rei::desenha(){
-	if (time == false)
+	if (team == false){
 		return 'K'; // peças pretas são MAIUSCULAS
-	else
+	}
+	else{
 		return 'k';
+	}
 }
 
 bool Rei::checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino){
-	if (colunaDestino <= 8 && colunaDestino >= 1 && linhaDestino <= 8 && linhaDestino >= 1){   // checar se o destino não esta pra fora do tabuleiro
-		if (linhaOrigem == linhaDestino && (colunaDestino == colunaOrigem+1 || colunaDestino == colunaOrigem-1)) //andar na mesma linha
+	cout << "checaMovimento rei" << endl;
+	if (colunaDestino >= 0 && colunaDestino < 8 && linhaDestino >= 0 && linhaDestino < 8){   // checar se o destino não esta pra fora do tabuleiro
+		if (linhaOrigem == linhaDestino && (colunaDestino == colunaOrigem + 1 || colunaDestino == colunaOrigem - 1)){ //andar na mesma linha
 			return true;
-		else if (colunaOrigem == colunaDestino && (linhaDestino == linhaOrigem-1 || linhaDestino == linhaOrigem+1)) // andar na mesma coluna
+		}
+		else if (colunaOrigem == colunaDestino && (linhaDestino == linhaOrigem - 1 || linhaDestino == linhaOrigem + 1)){ // andar na mesma coluna
 			return true;
-		else if (linhaDestino == linhaOrigem-1 && colunaDestino == colunaOrigem-1) //andar na diagonal superior esquerda
+		}
+		else if (linhaDestino == linhaOrigem - 1 && colunaDestino == colunaOrigem - 1){ //andar na diagonal superior esquerda
 			return true;
-		else if(linhaDestino == linhaOrigem+1 && colunaDestino == colunaOrigem+1) // andar na diagonal superior direita
+		}
+		else if(linhaDestino == linhaOrigem + 1 && colunaDestino == colunaOrigem + 1){ // andar na diagonal superior direita
 			return true;
-		else if (linhaDestino == linhaOrigem+1 && colunaDestino == colunaOrigem-1)// andar na diagonal inferior esquerda
+		}
+		else if (linhaDestino == linhaOrigem + 1 && colunaDestino == colunaOrigem - 1){// andar na diagonal inferior esquerda
 			return true;
-		else if (linhaDestino == linhaOrigem-1 && colunaDestino == colunaOrigem+1) // andar na diagonal inferior direita
+		}
+		else if (linhaDestino == linhaOrigem - 1 && colunaDestino == colunaOrigem + 1){ // andar na diagonal inferior direita
 			return true;
-		else
+		}
+		else{
 			return false; // se for uma posição invalida
-	} else
+		}
+	}
+	else{
 		return false; //caso esteja fora do tabuleiro
+	}
 }

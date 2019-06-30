@@ -11,7 +11,10 @@
 class Rei : public Piece{
 
 public:
-	Rei(bool Time);
+	Rei(bool t);
+	virtual ~Rei(){ };
+	void captured();
+	bool getTeam();
 	char desenha();
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };

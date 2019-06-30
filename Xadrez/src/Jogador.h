@@ -9,17 +9,22 @@
 #define JOGADOR_H_
 #include "Piece.h"
 #include <string>
+#include <vector>
+using std::vector;
 
 using namespace std;
 
 class Jogador {
 public:
 	Jogador();
+	Jogador(string n, vector <Piece *> p);
 	virtual ~Jogador();
+	void setNome(string n);
+	string getNome();
 
 private:
 	string nome;
-	Piece *pieces[16];
+	vector <Piece *> pieces;
 };
 
 #endif /* JOGADOR_H_ */

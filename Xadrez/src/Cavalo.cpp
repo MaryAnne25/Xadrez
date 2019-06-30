@@ -12,37 +12,50 @@ using namespace std;
 //faltam os movimentos especiais e saber se a peca eh inimiga ou aliada
 
 
-Cavalo::Cavalo(bool Time) {    //construtor
+Cavalo::Cavalo(bool t){    //construtor
 	emJogo = true;
-	time = Time;
+	team = t;
 }
 
+void Cavalo::captured(){
+	emJogo = false;
+}
+
+bool Cavalo::getTeam(){
+	return team;
+}
 
 char Cavalo::desenha() {      // desenha a peca no tabuleiro
-	if (time == false)
+	if (team == false){
 		return 'C'; // peças pretas são MAIUSCULAS
-	else
+	}
+	else{
 		return 'c';
+	}
 }
 
 bool Cavalo::checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino){
-	if(linhaDestino >= 1 && linhaDestino <= 8 && colunaDestino >= 1 && colunaDestino <= 8){ // o destino deve estar dentro do tabuleiro
+	cout << "checaMovimento cavalo" << endl;
+	if(linhaDestino >= 0 && linhaDestino < 8 && colunaDestino >= 0 && colunaDestino < 8){ // o destino deve estar dentro do tabuleiro
 
-		if(linhaDestino == linhaOrigem - 2 && (colunaDestino == colunaOrigem - 1 || colunaDestino == colunaOrigem + 1)){		//dupla superior
+		if(linhaDestino == linhaOrigem - 2 && (colunaDestino == colunaOrigem - 1 || colunaDestino == colunaOrigem + 1)){		//
 			return true;   // caso o destino esteja vazio
-
-		} else if(linhaDestino == linhaOrigem + 2 && (colunaDestino == colunaOrigem - 1 || colunaDestino == colunaOrigem + 1)){	//dupla inferior
+		}
+		else if(linhaDestino == linhaOrigem + 2 && (colunaDestino == colunaOrigem - 1 || colunaDestino == colunaOrigem + 1)){	//dupla inferior
 			return true;   // caso o destino esteja vazio
-
-		} else if(colunaDestino == colunaOrigem + 2 && (linhaDestino == linhaOrigem - 1 || linhaDestino == linhaOrigem + 1)){	//dupla direita
+		}
+		else if(colunaDestino == colunaOrigem + 2 && (linhaDestino == linhaOrigem - 1 || linhaDestino == linhaOrigem + 1)){	//dupla direita
 			return true;   // caso o destino esteja vazio
-
-		} else if(colunaDestino == colunaOrigem - 2 && (linhaDestino == linhaOrigem - 1 || linhaDestino == linhaOrigem + 1)){	//dupla esquerda
+		}
+		else if(colunaDestino == colunaOrigem - 2 && (linhaDestino == linhaOrigem - 1 || linhaDestino == linhaOrigem + 1)){	//dupla esquerda
 			return true;   // caso o destino esteja vazio
-
-		} else
+		}
+		else{
 			return false;
+		}
 
-	} else
+	}
+	else{
 		return false;
+	}
 }

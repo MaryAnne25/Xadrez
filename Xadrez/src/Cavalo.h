@@ -11,7 +11,10 @@
 class Cavalo : public Piece {
 
 public:
-	Cavalo(bool Time);
+	Cavalo(bool t);
+	virtual ~Cavalo(){ };
+	void captured();
+	bool getTeam();
 	char desenha();
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };

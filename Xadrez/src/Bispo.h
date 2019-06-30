@@ -11,7 +11,10 @@
 class Bispo : public Piece{
 
 public:
-	Bispo(bool Time);
+	Bispo(bool t);
+	virtual ~Bispo(){ };
+	void captured();
+	bool getTeam();
 	char desenha();
 	bool checaMovimento(int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino);
 };
